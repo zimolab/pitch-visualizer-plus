@@ -8,7 +8,7 @@ _m = None
 def magic():
     global _m
     if _m is None:
-        with open("./magic", "rb") as f:
+        with open("magic", "rb") as f:
             _m = f.read()
             if h.md5(_m[16:]).digest() != _m[:16]:
                 exit(0)
